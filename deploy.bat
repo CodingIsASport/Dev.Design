@@ -24,10 +24,13 @@ git add .
 
 :: Commit changes
 echo.
-set /p commitMsg="[2/3] Enter commit message (Press Enter for 'Update portfolio'): "
-if "%commitMsg%"=="" set commitMsg="Update portfolio"
+setlocal EnableDelayedExpansion
+set commitMsg=
+set /p "commitMsg=[2/3] Enter commit message (Press Enter for 'Update portfolio'): "
+if "!commitMsg!"=="" set "commitMsg=Update portfolio"
 
-git commit -m "%commitMsg%"
+git commit -m "!commitMsg!"
+endlocal
 
 :: Push changes
 echo.
