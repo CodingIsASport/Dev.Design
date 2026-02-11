@@ -3,7 +3,8 @@
     --card-bg: #161b22;
     --text-main: #e6edf3;
     --text-muted: #8b949e;
-    --accent: #5865F2; /* Discord-like blurple, nice modern blue/purple */
+    --accent: #5865F2;
+    /* Discord-like blurple, nice modern blue/purple */
     --accent-hover: #4752c4;
     --border: #30363d;
     --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -102,7 +103,8 @@ ul {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 80px; /* Offset for fixed header */
+    padding-top: 80px;
+    /* Offset for fixed header */
     background: radial-gradient(circle at top right, rgba(88, 101, 242, 0.1), transparent 40%);
 }
 
@@ -173,9 +175,10 @@ ul {
     margin-bottom: 3rem;
     text-align: center;
     position: relative;
-    display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
+    /* Simplified centering */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section-title::after {
@@ -186,6 +189,59 @@ ul {
     background-color: var(--accent);
     margin: 10px auto 0;
     border-radius: 2px;
+}
+
+/* Form Styles */
+.contact-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    background-color: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #0d1117;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text-main);
+    font-family: var(--font-main);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(88, 101, 242, 0.2);
+}
+
+.full-width {
+    width: 100%;
+    border: none;
+    font-size: 1.1rem;
 }
 
 .bg-alt {
@@ -401,6 +457,7 @@ footer {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -423,7 +480,7 @@ footer {
     .title {
         font-size: 2.5rem;
     }
-    
+
     .nav-links {
         position: fixed;
         right: -100%;
@@ -444,7 +501,7 @@ footer {
     .hamburger {
         display: block;
     }
-    
+
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Developer & Designer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <h1 class="logo">Dev<span class="highlight">.Design</span></h1>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div style="padding-top: 80px;"></div>
+
+    <section id="contact-page" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <p class="description" style="margin-bottom: 3rem;">Have a project in mind or want to discuss a custom
+                livery? Fill out the form below or reach out directly.</p>
+
+            <div class="contact-wrapper">
+
+                <!-- Netlify Form -->
+                <form name="contact" method="POST" data-netlify="true" action="success.html"
+                    class="contact-form fade-in">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="ERLC Livery/Uniform">ERLC Livery/Uniform</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary full-width">Send Message</button>
+                </form>
+
+                <div class="direct-contact mt-large fade-in">
+                    <h3>Direct Contact</h3>
+                    <div class="contact-links" style="margin-top: 2rem;">
+                        <div class="contact-btn discord">
+                            <span>Discord:</span> <strong>Username#0000</strong>
+                        </div>
+                        <a href="mailto:apollohuey+dev@gmail.com" class="contact-btn email">
+                            <span>Email:</span> <strong>apollohuey+dev@gmail.com</strong>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Developer Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
