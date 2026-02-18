@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Developer & Designer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <h1 class="logo">Dev<span class="highlight">.Design</span></h1>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html" class="active">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div style="padding-top: 80px;"></div>
+
+    <section id="pricing" class="section">
+        <div class="container">
+            <h2 class="section-title">Service Pricing</h2>
+            <p class="description" style="margin: 0 auto 3rem; text-align: center;">Transparent pricing for web
+                development and ERLC assets. Click on any item for a detailed breakdown.</p>
+
+            <!-- Web Development Pricing -->
+            <h3 class="subsection-title">Web Development</h3>
+            <div class="pricing-table fade-in">
+                <div class="pricing-header">
+                    <div class="col-service">Service</div>
+                    <div class="col-price">Robux</div>
+                    <div class="col-price">USD</div>
+                </div>
+                <div class="pricing-row" onclick="openModal('web-landing')">
+                    <div class="col-service">Landing Page</div>
+                    <div class="col-price">R$ 5,000</div>
+                    <div class="col-price">$15.00</div>
+                </div>
+                <div class="pricing-row" onclick="openModal('web-full')">
+                    <div class="col-service">Full Website (Multi-page)</div>
+                    <div class="col-price">R$ 15,000+</div>
+                    <div class="col-price">$45.00+</div>
+                </div>
+                <div class="pricing-row" onclick="openModal('web-script')">
+                    <div class="col-service">Custom Scripting / UI</div>
+                    <div class="col-price">R$ 2,500+</div>
+                    <div class="col-price">$8.00+</div>
+                </div>
+            </div>
+
+            <!-- ERLC Assets Pricing -->
+            <h3 class="subsection-title mt-large">ERLC Assets</h3>
+            <div class="pricing-table fade-in">
+                <div class="pricing-header">
+                    <div class="col-service">Asset Type</div>
+                    <div class="col-price">Robux</div>
+                    <div class="col-price">USD</div>
+                </div>
+                <div class="pricing-row" onclick="openModal('erlc-livery')">
+                    <div class="col-service">Single Livery</div>
+                    <div class="col-price">R$ 350</div>
+                    <div class="col-price">$1.50</div>
+                </div>
+                <div class="pricing-row" onclick="openModal('erlc-pack')">
+                    <div class="col-service">Livery Pack (3-5 Vehicles)</div>
+                    <div class="col-price">R$ 1,200</div>
+                    <div class="col-price">$4.00</div>
+                </div>
+                <div class="pricing-row" onclick="openModal('erlc-dept')">
+                    <div class="col-service">Department Bundle (10+ Vehicles)</div>
+                    <div class="col-price">R$ 3,500</div>
+                    <div class="col-price">$12.00</div>
+                </div>
+                <div class="pricing-row" onclick="openModal('erlc-uniform')">
+                    <div class="col-service">Custom Uniform (Shirt + Pants)</div>
+                    <div class="col-price">R$ 250</div>
+                    <div class="col-price">$1.00</div>
+                </div>
+                <div class="pricing-row" onclick="openModal('erlc-uniform-pack')">
+                    <div class="col-service">Uniform Pack (Class A/B/C)</div>
+                    <div class="col-price">R$ 600</div>
+                    <div class="col-price">$2.50</div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <p class="text-muted" style="margin-bottom: 1rem;">Have a custom request or bulk order?</p>
+                <a href="contact.html" class="btn primary">Get a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Structure -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalBody">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Developer Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Modal Data -->
+    <script>
+        const pricingData = {
+            'web-landing': {
+                title: 'One-Page Landing Website',
+                desc: 'A professional, single-page website perfect for personal portfolios, event pages, or product showcases.',
+                includes: ['Responsive Design', 'Hero Section', 'About/Features', 'Contact Form Integration', 'Basic SEO Setup'],
+                time: '2-4 Days'
+            },
+            'web-full': {
+                title: 'Full Multi-Page Website',
+                desc: 'A comprehensive website with multiple pages (Home, About, Services, Contact, etc.) for a complete online presence.',
+                includes: ['Up to 5 Pages', 'Advanced Navigation', 'Custom Animations', 'Interactive Elements', 'Optimized Performance'],
+                time: '1-2 Weeks'
+            },
+            'web-script': {
+                title: 'Custom Scripting & UI',
+                desc: 'Specific JavaScript functionality or custom UI components for existing websites.',
+                includes: ['Interactive Dashboards', 'Data Visualization', 'Custom Modals/Sliders', 'API Integration'],
+                time: 'Varies'
+            },
+            'erlc-livery': {
+                title: 'Single ERLC Livery',
+                desc: 'High-quality custom texture for one specific vehicle model in ERLC.',
+                includes: ['Custom Branding', 'High-Res Texture', 'Unlimited Revisions', 'Fast Delivery'],
+                time: '24 Hours'
+            },
+            'erlc-pack': {
+                title: 'Livery Mini-Pack',
+                desc: 'A cohesive design set for a small group of vehicles (e.g., Patrol, SUV, Charger).',
+                includes: ['3-5 Vehicles', 'Uniform Design Style', 'Unit Number Variations'],
+                time: '2-3 Days'
+            },
+            'erlc-dept': {
+                title: 'Full Department Bundle',
+                desc: 'Complete fleet branding for an entire department (PD, Sheriff, Fire, DOT).',
+                includes: ['10+ Vehicles', 'Specialized Units (K9, TEU)', 'Command Staff Liveries', 'Priority Support'],
+                time: '5-7 Days'
+            },
+            'erlc-uniform': {
+                title: 'Custom Uniform Set',
+                desc: 'Detailed custom uniform shirt and pants.',
+                includes: ['Custom Patches', 'Belt Details', 'Badge & Nameplate', 'Shading & Wraps'],
+                time: '24 Hours'
+            },
+            'erlc-uniform-pack': {
+                title: 'Rank-Based Uniform Pack',
+                desc: 'Complete uniform sets for different ranks or classes.',
+                includes: ['Class A, B, and C Variants', 'Rank Insignia Changes', 'Formal & Tactical Versions'],
+                time: '2-3 Days'
+            }
+        };
+
+        function openModal(id) {
+            const modal = document.getElementById('infoModal');
+            const body = document.getElementById('modalBody');
+            const data = pricingData[id];
+
+            if (data) {
+                let html = `<h3>${data.title}</h3>
+                            <p class="modal-desc">${data.desc}</p>
+                            <h4 style="margin-top: 1.5rem; color: var(--accent);">What's Included:</h4>
+                            <ul class="modal-list">
+                                ${data.includes.map(item => `<li>${item}</li>`).join('')}
+                            </ul>
+                            <div class="modal-time">
+                                <strong><span class="icon">⏱</span> Estimated Time:</strong> ${data.time}
+                            </div>`;
+                body.innerHTML = html;
+                modal.style.display = 'block';
+                // Trigger reflow for animation
+                void modal.offsetWidth;
+                modal.classList.add('show');
+            }
+        }
+    </script>
+</body>
+
+</html>
