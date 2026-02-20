@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liberty Heights Fire & Rescue - Case Study</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Specific Case Study Styles */
+        .case-header {
+            background-color: #1a1515;
+            /* Subtle red-tinted dark background */
+            padding: 6rem 0 4rem;
+            border-bottom: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .cs-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            flex-wrap: wrap;
+        }
+
+        .cs-meta div {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+        }
+
+        .cs-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .metric {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .metric h4 {
+            color: var(--accent);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .color-palette {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .color-swatch {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-end;
+            padding: 0.5rem;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .cs-section {
+            margin-bottom: 5rem;
+        }
+
+        .cs-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .img-showcase {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <h1 class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">Dev<span
+                        class="highlight">.Design</span></a></h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="case-header">
+        <div class="container fade-in-up">
+            <h1 class="title" style="font-size: 3rem; margin-bottom: 1rem;">Liberty Heights Fire & Rescue</h1>
+            <p class="description" style="margin-bottom: 0; max-width: 800px;">A comprehensive, professional branding
+                and asset kit designed for a realism-based ERLC server. Focused on authority, trust, and a cohesive
+                visual identity.</p>
+
+            <div class="cs-meta">
+                <div><strong>Role:</strong> Lead Designer</div>
+                <div><strong>Tools:</strong> Photoshop, Illustrator, Roblox Studio</div>
+                <div><strong>Timeline:</strong> 2 Weeks</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+
+        <!-- Showcase Image (The logo generated) -->
+        <div class="fade-in">
+            <img src="assets/lhfr_logo.png" alt="LHFR Logo Concept" class="img-showcase">
+        </div>
+
+        <div class="cs-section fade-in mt-large">
+            <h3>Project Overview</h3>
+            <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8;">
+                Liberty Heights Fire & Rescue needed an identity that felt rooted in reality. The goal was to step away
+                from generic server assets and build a brand that commanded respect, looking as accurate and polished as
+                a real-world municipal fire department. The project spanned across vehicle liveries, custom patches,
+                uniform texturing, and digital community assets (Discord).
+            </p>
+
+            <div
+                style="background: var(--card-bg); border-left: 4px solid var(--accent); padding: 1.5rem; margin-top: 2rem; border-radius: 0 8px 8px 0;">
+                <h4 style="margin-bottom: 0.5rem;">Mission Statement</h4>
+                <p style="font-style: italic; color: #ccc;">"Serving Liberty Heights with professionalism, integrity,
+                    and unwavering dedication to life safety."</p>
+            </div>
+        </div>
+
+        <div class="cs-section fade-in">
+            <h3>Color Palette</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1rem;">A commanding palette relying on deep reds and
+                high-contrast whites & yellows to emulate real-world high-visibility fire apparatus.</p>
+            <div class="color-palette">
+                <div class="color-swatch" style="background-color: #C62828;">Primary Red</div>
+                <div class="color-swatch" style="background-color: #8E0000;">Dark Red</div>
+                <div class="color-swatch" style="background-color: #1C1C1C;">Charcoal</div>
+                <div class="color-swatch" style="background-color: #4F4F4F;">Steel Gray</div>
+                <div class="color-swatch" style="background-color: #FBC02D; color: #111;">Emerg. Yellow</div>
+                <div class="color-swatch" style="background-color: #FFFFFF; color: #111;">White Accent</div>
+            </div>
+        </div>
+
+        <div class="cs-metrics fade-in">
+            <div class="metric">
+                <h4>15+</h4>
+                <p>Custom Vehicle Liveries</p>
+            </div>
+            <div class="metric">
+                <h4>8</h4>
+                <p>Distinct Rank Uniforms</p>
+            </div>
+            <div class="metric">
+                <h4>3</h4>
+                <p>Branded Logos & Crests</p>
+            </div>
+        </div>
+
+        <div class="cs-section fade-in">
+            <h3>Vehicle Livery Design</h3>
+            <p style="color: var(--text-muted); line-height: 1.8;">
+                The fleet design was crucial. Engine and Ladder trucks feature a deep red base with a bold white
+                horizontal stripe and yellow reflective striping underneath. The styling emphasizes high visibility
+                while maintaining a clean, modern aesthetic. Support vehicles, like the Battalion Chief SUV, utilize a
+                sleek black base with a subtle red side fade to differentiate command staff from line apparatus.
+            </p>
+        </div>
+
+        <div class="cs-section fade-in">
+            <h3>Uniform & Rank Structure</h3>
+            <p style="color: var(--text-muted); line-height: 1.8;">
+                The uniform package was designed to visually separate the chain of command effortlessly. Station wear
+                consists of breathable black polos with red accent lines and embroidered logos. Command staff are
+                distinguished by formal white button-downs and gold insignia.
+                <br><br>
+                The Rank Structure included specific badges and striping for: Probationary, Firefighter, Senior
+                Firefighter, Lieutenant, Captain, Battalion Chief, Assistant Chief, and Fire Chief.
+            </p>
+        </div>
+
+        <div class="cs-section fade-in">
+            <h3>Digital Integration</h3>
+            <p style="color: var(--text-muted); line-height: 1.8;">
+                To bring the community together, the branding extended to the department's Discord and documentation.
+                This included a unified server icon, matching role colors syncing directly with the in-game rank
+                structure (e.g., Red for firefighters, Gold for chiefs), and standardizing social media templates for
+                announcements, promos, and recruitment drives.
+            </p>
+        </div>
+
+        <div style="text-align: center; margin-top: 5rem;">
+            <a href="portfolio.html" class="btn secondary">&larr; Back to Portfolio</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Developer Portfolio. All rights reserved.</p>
+            <div class="footer-links" style="margin-top: 10px; font-size: 0.85rem;">
+                <a href="terms.html" style="color: var(--text-muted); margin-right: 15px;">Terms of Service</a>
+                <a href="privacy.html" style="color: var(--text-muted);">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
