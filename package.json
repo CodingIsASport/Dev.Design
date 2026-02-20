@@ -1,0 +1,25 @@
+{
+  "name": "portfolio_website",
+  "version": "1.0.0",
+  "description": "A modern, dark-themed portfolio website for a Developer & ERLC Livery Designer.",
+  "main": "script.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodingIsASport/Dev.Design.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/CodingIsASport/Dev.Design/issues"
+  },
+  "homepage": "https://github.com/CodingIsASport/Dev.Design#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

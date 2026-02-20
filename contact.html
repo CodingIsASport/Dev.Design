@@ -42,46 +42,46 @@
 
             <div class="contact-wrapper">
 
-                <!-- Contact Form (Replace YOUR_ENDPOINT_HERE with your Formspree or form handler URL) -->
-                <form name="contact" method="POST" action="https://formspree.io/f/xkovvlbj
-                    <div class=" form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-            </div>
-            <div class="form-group">
-                <label for="subject">Subject</label>
-                <select id="subject" name="subject">
-                    <option value="General Inquiry">General Inquiry</option>
-                    <option value="Web Development">Web Development</option>
-                    <option value="ERLC Livery/Uniform">ERLC Livery/Uniform</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
-                    required></textarea>
-            </div>
-            <button type="submit" class="btn primary full-width submit-btn-animated">Send Message</button>
-            </form>
-
-            <div class="direct-contact mt-large fade-in">
-                <h3>Direct Contact</h3>
-                <div class="contact-links" style="margin-top: 2rem;">
-                    <div class="contact-btn discord">
-                        <span>Discord:</span> <strong>wollo_dumlap</strong>
+                <!-- Dedicated Express Node Form -->
+                <form name="contact" method="POST" action="/submit-form" class="contact-form fade-in">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
                     </div>
-                    <a href="mailto:apollohuey+dev@gmail.com" class="contact-btn email">
-                        <span>Email:</span> <strong>apollohuey+dev@gmail.com</strong>
-                    </a>
-                </div>
-            </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="ERLC Livery/Uniform">ERLC Livery/Uniform</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary full-width submit-btn-animated">Send Message</button>
+                </form>
 
-        </div>
+                <div class="direct-contact mt-large fade-in">
+                    <h3>Direct Contact</h3>
+                    <div class="contact-links" style="margin-top: 2rem;">
+                        <div class="contact-btn discord">
+                            <span>Discord:</span> <strong>wollo_dumlap</strong>
+                        </div>
+                        <a href="mailto:apollohuey+dev@gmail.com" class="contact-btn email">
+                            <span>Email:</span> <strong>apollohuey+dev@gmail.com</strong>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
