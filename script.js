@@ -136,6 +136,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="lightbox-caption">
                             <h3>${title}</h3>
                             <p>${desc}</p>
+                            ${card.dataset.tools ? `<div style="margin-top: 1rem; text-align: left; background: rgba(0,0,0,0.3); padding: 0.8rem; border-radius: 6px;"><strong>🛠️ Tools Used:</strong> <span style="color: #ccc;">${card.dataset.tools}</span></div>` : ''}
+                            ${card.dataset.breakdown ? `<div style="margin-top: 0.5rem; text-align: left; background: rgba(0,0,0,0.3); padding: 0.8rem; border-radius: 6px;"><strong>📝 Breakdown:</strong> <span style="color: #ccc;">${card.dataset.breakdown}</span></div>` : ''}
+                            ${card.dataset.outcome ? `<div style="margin-top: 0.5rem; text-align: left; background: rgba(0,0,0,0.3); padding: 0.8rem; border-radius: 6px;"><strong>✅ Outcome:</strong> <span style="color: #ccc;">${card.dataset.outcome}</span></div>` : ''}
                         </div>
                     `;
 
@@ -148,6 +151,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Add pointer cursor to indicate interactiveness
             card.style.cursor = 'pointer';
+        });
+    }
+
+    // Back to Top Button Logic
+    const backToTopBtn = document.getElementById('backToTop');
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
 });

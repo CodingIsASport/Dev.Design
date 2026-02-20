@@ -742,3 +742,210 @@ footer {
         color: var(--accent);
     }
 }
+
+/* 3-Column Pricing Cards (New) */
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.pricing-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.pricing-card.popular {
+    border-color: var(--accent);
+    transform: scale(1.05);
+    background-color: #1a1f28;
+    box-shadow: 0 10px 40px rgba(88, 101, 242, 0.15);
+    z-index: 1;
+}
+
+.pricing-card.popular:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .pricing-card.popular {
+        transform: scale(1);
+    }
+
+    .pricing-card.popular:hover {
+        transform: translateY(-5px);
+    }
+}
+
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--accent);
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pricing-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.pricing-card .price {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 1.5rem 0;
+}
+
+.pricing-card ul {
+    margin-bottom: 2rem;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.pricing-card ul li {
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+}
+
+.pricing-card .btn {
+    width: 100%;
+}
+
+/* Testimonials */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    transition: var(--transition);
+}
+
+.testimonial-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+}
+
+.testimonial-quote {
+    font-style: italic;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    position: relative;
+    padding-left: 1.5rem;
+    line-height: 1.7;
+}
+
+.testimonial-quote::before {
+    content: '\201C';
+    font-size: 3rem;
+    color: var(--accent);
+    position: absolute;
+    left: -5px;
+    top: -15px;
+    opacity: 0.3;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial-author-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #21262d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--text-main);
+    font-size: 1.2rem;
+}
+
+.testimonial-author-info h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+.testimonial-author-info span {
+    font-size: 0.9rem;
+    color: var(--accent);
+}
+
+/* Custom Additions */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--accent);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    z-index: 999;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-3px);
+}
+
+.view-details-btn {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.6rem;
+}
+
+.submit-btn-animated {
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.submit-btn-animated:hover {
+    box-shadow: 0 0 15px rgba(88, 101, 242, 0.4);
+}
